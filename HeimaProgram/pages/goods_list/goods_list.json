@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "SearchInput": "/components/SearchInput/SearchInput",
+    "my-tab-control": "/components/my-tab-control/my-tab-control",
+    "my-goods-item": "./childcpns/my-goods-item/my-goods-item"
+  },
+  "navigationBarTitleText": "商品列表",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#eee"
+}

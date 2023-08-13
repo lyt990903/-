@@ -1,0 +1,15 @@
+<!--pages/goods_list/childcpns/my-goods-item/my-goods-item.wxml-->
+<navigator class="goods-item" url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}">
+  <!-- 左侧图片 -->
+  <view class="goods-img-wrap">
+    <image 
+      src="{{item.goods_small_logo ? item.goods_small_logo : noImgURL}}" 
+      mode="widthFix"
+    />
+  </view>
+  <!-- 右侧容器 -->
+  <view class="goods-info-wrap">
+    <view class="goods-name">{{item.goods_name}}</view>
+    <view class="goods-price">￥{{item.goods_price}}</view>
+  </view>
+</navigator>

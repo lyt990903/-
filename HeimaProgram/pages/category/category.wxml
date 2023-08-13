@@ -1,0 +1,9 @@
+<!--pages/category/category.wxml-->
+<view class="cates">
+  <SearchInput/>
+  <my-cates-container 
+    menuList="{{leftMenuList}}" 
+    contentList="{{rightContent}}" 
+    bind:menuItemClick="handleMenuItemClick"
+  />
+</view>

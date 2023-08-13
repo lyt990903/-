@@ -1,0 +1,42 @@
+/* pages/index/childcpns/my-floorlist/my-floorlist.wxss */
+
+.floor-title image {
+  width: 100%;
+}
+
+/*232 386*/
+
+.floor-group {
+  margin-top: 30rpx;
+}
+
+.floor-list {
+  overflow: hidden;
+}
+
+.floor-list>navigator {
+  float: left;
+  width: 33.33%;
+  height: calc(33.33vw / 232 * 386);
+  box-sizing: border-box;
+  border-left: 7rpx solid rgba(0, 0, 0, 0);
+  border-right: 7rpx solid rgba(0, 0, 0, 0);
+  border-radius: 25rpx;
+}
+
+.floor-list>navigator:nth-child(2),.floor-list>navigator:nth-child(3) {
+  border-bottom: 14rpx solid rgba(0, 0, 0, 0)
+}
+
+.floor-list>navigator:nth-last-child(-n+4) {
+  /* 
+    第一张图片原宽高：232 386 
+    第一张图片现宽高：33.33vw (33.33vw/232*386)
+  */
+  height: calc(33.33vw / 232 * 386 /2);
+}
+
+.floor-list>navigator>image {
+  height: 100%;
+  width: 100%;
+}

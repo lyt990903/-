@@ -1,0 +1,12 @@
+/* pages/index/childcpns/my-cate/my-cate.wxss */
+.cate-box{
+  display: flex;
+}
+.cate-box navigator{
+  flex: 1;
+  padding: 20rpx;
+}
+
+.cate-box navigator image{
+  width: 100%;
+}

@@ -1,0 +1,25 @@
+<!--pages/cart/childcpns/my-cart-list/my-cart-list.wxml-->
+<view class="cart-list">
+  <view class="cart-title">购物车</view>
+  <view class="cart-content">
+    <block wx:for="{{list}}" wx:key="goods_id">
+      <view class="cart-item">
+        <!-- 图片 -->
+        <view class="img-wrap">
+          <image src="{{item.pics[0].pics_mid}}" mode="widthFix" />
+        </view>
+        <!-- 商品信息 -->
+        <view class="info-wrap">
+            <view class="goods-name">{{item.goods_name}}</view>
+          <view class="goods-price-wrap">
+            <view class="goods-price">￥{{item.goods_price}}</view>
+            <view class="goods-num-tool">
+              <view>×</view>
+              <view class="goods-num">{{item.num}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

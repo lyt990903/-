@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-address-raw": "./childcpns/my-address-raw/my-address-raw",
+    "my-cart-list": "./childcpns/my-cart-list/my-cart-list"
+  },
+  "navigationBarTitleText": "支付"
+}

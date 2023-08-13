@@ -1,0 +1,21 @@
+<!--pages/cart/childcpns/my-address-raw/my-address-raw.wxml-->
+<view class="address-raw">
+  <block wx:if="{{address.userName}}">
+    <view class="address-info">
+      <view class="left-info">
+        <view class="user-name">收货人:{{address.userName}}</view>
+        <view class="user-address">
+          {{address.provinceName}}{{address.cityName}}{{address.countyName}}{{address.detailInfo}}
+        </view>
+      </view>
+      <view class="right-info">
+        <view class="user-telNumber">{{address.telNumber}}</view>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="get-address-btn">
+      <button type="primary" plain bind:tap="handleGetAddress">获取收货地址</button>
+    </view>
+  </block>
+</view>

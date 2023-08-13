@@ -1,0 +1,4 @@
+<!--components/my-back-up/my-back-up.wxml-->
+<view class="back-up">
+  <image src="/static/img/top.png" bind:tap="handleBackUp"/>
+</view>

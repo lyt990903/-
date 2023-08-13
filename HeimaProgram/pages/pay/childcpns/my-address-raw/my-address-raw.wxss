@@ -1,0 +1,25 @@
+/* pages/cart/childcpns/my-address-raw/my-address-raw.wxss */
+
+.address-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color: #000;
+}
+
+.address-info .user-address {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.address-raw {
+  padding: 20rpx;
+  border-bottom: 1rpx solid var(--themeColor);
+}
+
+.address-raw>button {
+  width: 60%;
+}

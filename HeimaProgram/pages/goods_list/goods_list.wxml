@@ -1,0 +1,8 @@
+<!--pages/goods_list/goods_list.wxml-->
+<SearchInput/>
+<my-tab-control list="{{tabList}}" bind:tabItemClick="handleTabItemClick" />
+<view class="goods-list">
+  <block wx:for="{{goodsList}}" wx:key="goods_id">
+    <my-goods-item item="{{item}}"/>
+  </block>
+</view>

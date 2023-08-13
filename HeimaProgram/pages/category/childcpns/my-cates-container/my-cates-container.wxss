@@ -1,0 +1,60 @@
+/* pages/category/childcpns/my-cates-container/my-cates-container.wxss */
+
+.cates-container {
+  height: calc(100vh - 90rpx);
+  display: flex;
+}
+
+.left-menu {
+  flex: 2;
+  background-color: #eee;
+}
+
+.menu-item {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.active {
+  color: var(--themeColor);
+  border-left: 5rpx solid var(--themeColor);
+  background: #dedede;
+}
+
+.right-content {
+  flex: 5;
+}
+
+.goods-title {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delimiter{
+  color: #ccc;
+  padding: 0 10rpx;
+}
+
+.goods-group {
+  margin-bottom: 20rpx;
+}
+
+.goods-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goods-list>navigator {
+  width: 33.33%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.goods-list>navigator>image {
+  width: 50%;
+}

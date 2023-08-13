@@ -1,0 +1,42 @@
+<!--pages/cart/childcpns/my-cart-list/my-cart-list.wxml-->
+<view class="cart-list">
+  <view class="cart-title">购物车</view>
+  <view class="cart-content">
+    <block wx:for="{{list}}" wx:key="goods_id">
+      <view class="cart-item" bind:longtap="handleItemLongTap" data-id="{{item.goods_id}}">
+        <!-- 复选框 -->
+        <view class="chk-wrap">
+          <checkbox-group bind:change="handleChkChange" data-id="{{item.goods_id}}">
+            <checkbox color="var(--themeColor)" checked="{{item.checked}}"></checkbox>
+          </checkbox-group>
+        </view>
+        <!-- 图片 -->
+        <view class="img-wrap">
+          <image src="{{item.pics[0].pics_mid}}" mode="widthFix" />
+        </view>
+        <!-- 商品信息 -->
+        <view class="info-wrap">
+          <navigator url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}">
+            <view class="goods-name">{{item.goods_name}}</view>
+          </navigator>
+          <view class="goods-price-wrap">
+            <view class="goods-price">￥{{item.goods_price}}</view>
+            <view class="goods-num-tool">
+              <view 
+              class="num-edit" 
+              bind:tap="handleNumEditClick" 
+              data-operation="{{-1}}" 
+              data-id="{{item.goods_id}}">-</view>
+              <view class="goods-num">{{item.num}}</view>
+              <view 
+              class="num-edit"
+              bind:tap="handleNumEditClick" 
+              data-operation="{{1}}" 
+              data-id="{{item.goods_id}}">+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

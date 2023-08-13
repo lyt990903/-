@@ -1,0 +1,16 @@
+<!--pages/login/login.wxml-->
+<block wx:if="{{canIUse}}">
+  <view class="auth-container">
+    <view class="auth-header">
+      <view class="auth-avatar">
+        <open-data type='userAvatarUrl' mode="widthFix"></open-data>
+      </view>
+    </view>
+    <view class="auth-title">申请以下权限</view>
+    <view class="auth-content">获得您的公开信息(昵称,头像,手机等)</view>
+    <button class="auth-btn" type="primary" open-type="getUserInfo" bind:getuserinfo="handleGetUserInfo">授权登录</button>
+  </view>
+</block>
+<block wx:else>
+  <view>请升级您的微信版本</view>
+</block>

@@ -1,0 +1,12 @@
+/* components/my-back-up/my-back-up.wxss */
+
+.back-up {
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+
+.back-up image {
+  height: 130rpx;
+  width: 130rpx;
+}

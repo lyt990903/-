@@ -1,0 +1,35 @@
+<!--pages/category/childcpns/my-cates-container/my-cates-container.wxml-->
+<view class="cates-container">
+  <!-- 左侧菜单 -->
+  <scroll-view scroll-y class="left-menu">
+    <block wx:for="{{menuList}}" wx:key="*this">
+      <view 
+        class="menu-item {{index == currentIndex ? 'active' : ''}}"
+        bind:tap="menuItemClick"
+        data-index="{{index}}"
+      >
+        {{item}}
+      </view>
+    </block>
+  </scroll-view>
+  <!-- 右侧菜单 -->
+  <scroll-view scroll-y class="right-content" scroll-top="{{scrollTop}}">
+    <block wx:for="{{contentList}}" wx:key="cat_id" wx:for-item="item1" wx:for-index="index1">
+      <view class="goods-group">
+        <view class="goods-title">
+          <text class="delimiter">/</text>
+          <text class="title">{{item1.cat_name}}</text>
+          <text class="delimiter">/</text>
+        </view>
+        <view class="goods-list">
+          <block wx:for="{{item1.children}}" wx:key="cat_id" wx:for-item="item2" wx:for-index="index2">
+            <navigator url="/pages/goods_list/goods_list?cid={{item2.cat_id}}">
+              <image src="{{item2.cat_icon}}" mode="widthFix"/>
+              <view class="goods-name">{{item2.cat_name}}</view>
+            </navigator>
+          </block>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

@@ -1,0 +1,23 @@
+<!--pages/home/home.wxml-->
+<my-swiper list="{{banner}}" />
+
+<my-recommend list="{{recommend}}" bind:imgLoaded="handleImgLoad" />
+
+<view class="popular">
+  <image src="/assets/images/home/popular_bg.jpg" mode="widthFix"/>
+</view>
+
+<my-tab-control 
+  titles="{{tabControlTitles}}" 
+  bind:itemclick="handleTabClick" 
+  id="tab-control"
+  class="{{isTabFixed ? 'fixed' : ''}}"
+/>
+<my-tab-control
+  titles="{{tabControlTitles}}" 
+  wx:if="{{isTabFixed}}"
+/>
+
+<my-goods-list list="{{goods[currentType].list}}"/>
+
+<my-back-up wx:if="{{showBackUp}}"/>

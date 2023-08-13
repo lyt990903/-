@@ -1,0 +1,27 @@
+<!--pages/pay/pay.wxml-->
+<!-- 获取收货地址 -->
+<my-address-raw address="{{address}}" />
+<!-- 购物车列表 -->
+<block wx:if="{{goodsList.length == 0}}">
+  <image src="http://hbimg.b0.upaiyun.com/e1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658" mode="widthFix" />
+  <view style="text-align:center;font-size:38rpx;">您的购物车还是空的，快去采购吧</view>
+</block>
+<block wx:else>
+  <my-cart-list 
+  list="{{goodsList}}" 
+  bind:chkChange="handleChkChange" 
+  bind:numEditClick="handleNumEditClick"
+  bind:itemLongTap="handleItemLongTap" />
+</block>
+
+<!-- 底部工具栏 -->
+<view class="btm-toolbar">
+  <view class="all-price-wrap">
+    <view>
+      合计:
+      <text class="price-text">￥{{totalPrice}}</text>
+    </view>
+    <view>包含运费</view>
+  </view>
+  <view class="order-pay-wrap" bind:tap="handleOrderPay">支付({{totalNum}})</view>
+</view>

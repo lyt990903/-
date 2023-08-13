@@ -1,0 +1,10 @@
+<!--pages/index/index.wxml-->
+<view class="ptg-box">
+  <SearchInput/>
+</view>
+
+<my-swiper list="{{swiperList}}" key="goods_id"/>
+
+<my-cate list="{{cateList}}"/>
+
+<my-floorlist list="{{floorList}}"/>

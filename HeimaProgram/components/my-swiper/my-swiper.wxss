@@ -1,0 +1,10 @@
+/* components/my-swiper/my-swiper.wxss */
+.swiper-box{
+  /* 默认屏幕宽度750rpx*/
+  height: 340rpx;
+  width: 750rpx;
+}
+
+.swiper-box image{
+  width: 100%;
+}

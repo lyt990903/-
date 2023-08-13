@@ -1,0 +1,8 @@
+/* pages/category/category.wxss */
+page {
+  height: 100%;
+}
+
+.cates {
+  height: 100%;
+}

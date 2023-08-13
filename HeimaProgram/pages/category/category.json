@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "SearchInput": "/components/SearchInput/SearchInput",
+    "my-cates-container":"./childcpns/my-cates-container/my-cates-container"
+  },
+  "navigationBarTitleText": "优购首页"
+}
